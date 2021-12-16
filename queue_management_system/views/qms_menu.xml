@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+ <act_window id="action_qms_token"
+      name="Token"
+      res_model="qms.token"
+      view_mode="tree,form"
+	/>
+    
+ <act_window id="action_qms_token_detail"
+      name="Token Detail"
+      res_model="qms.token.detail"
+      view_mode="tree,form"
+	/>
+   
+    <menuitem id="menu_qms_system"
+              name="Queue Management"
+              sequence="22" />
+
+    <menuitem name="Doctors" 
+    parent="menu_qms_system" 
+    
+	      action="hr.open_view_employee_list_my"
+    id="menu_qms_employee" sequence="23"/>
+
+
+    <menuitem name="Departments" 
+    parent="menu_qms_system" 
+    
+	      action="hr.open_module_tree_department"
+    id="menu_qms_dept" sequence="24"/>
+
+    <menuitem name="Token" 
+    parent="menu_qms_system" 
+    
+	      action="action_qms_token"
+    id="menu_qms_token" sequence="25"/>
+
+    <menuitem name="Token Details" 
+    parent="menu_qms_system" 
+    
+	      action="action_qms_token_detail"
+    id="menu_qms_token_detail" sequence="26"/>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- for list tree view -->
+<record id="view_tree_token_detail" model="ir.ui.view">
+	<field name="name">Token Detail</field>
+	<field name="model">qms.token.detail</field>
+	<field name="arch" type="xml">
+	<tree>
+		<field name="token_id"></field>
+		<field name="tokenValue"></field>
+		<field name="genertedTime"></field>
+		<field name="servedTime"></field>
+	</tree>
+	</field>
+</record>
+<!-- for search view -->
+
+<record id="view_search_token_detail" model="ir.ui.view">
+	<field name="name">Token Detail Filters</field>
+	<field name="model">qms.token.detail</field>
+	<field name="arch" type="xml">
+	<search>
+		<field name="token_id"></field>
+		<field name="tokenValue"></field>
+		<field name="genertedTime"></field>
+		<field name="servedTime"></field>
+	</search>
+	</field>
+</record>
+
+
+<!-- For form view-->
+	<record id="view_form_token_detail" model="ir.ui.view">
+		<field name="name">Token Detail form</field>
+		<field name="model">qms.token.detail</field>
+		<field name="arch" type="xml">
+		<form string="Token Detail">
+			<sheet>
+				<group name="group_top">
+					<group name="group_left">
+						<field name="token_id"></field>
+						<field name="tokenValue" readonly ="1"></field>
+					</group>
+
+					<group name="group_right">
+
+						<field name="genertedTime"></field>
+						<field name="servedTime"></field>
+					</group>
+					
+				</group>
+			</sheet>
+		</form>
+		</field>
+	</record>
+
+
+
+
+</odoo>

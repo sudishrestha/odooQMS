@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="hr_employee_add_doctor_info" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="address_id" position="before">
+                <field String="Sub Title" name="subtitle"/>
+                          </field>
+            <field name="department_id" position="before">
+                <field String="NMC No" name="nmcno"/>
+            </field>
+        </field>
+    </record>
+
+
+
+</odoo>
